@@ -220,3 +220,6 @@ end
 SolverInterface.getsolution(m::NLoptMathProgModel) = m.x
 SolverInterface.getobjval(m::NLoptMathProgModel) = m.objval
 
+function SolverInterface.freemodel!(m::NLoptMathProgModel)
+    freemodel!(m)
+end
